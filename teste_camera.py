@@ -12,7 +12,7 @@ if webcam.isOpened():
       cv2.imshow("Imagem da Webcam", frame)
       key = cv2.waitKey(2)
       if cv2.waitKey(33) == ord('a'):
-         cv2.imwrite("Foto.png",frame)
+         #cv2.imwrite("Foto.png",frame)
          filename = cv2.imread("Foto.png")
          qrapp2.lerQR(filename)
          break
