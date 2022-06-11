@@ -1,24 +1,9 @@
-from kivy.app import App
-from kivy.lang import Builder
-from pyzbar.pyzbar import decode
+import cv2
+import webbrowser
 
-class QrCodeApp(App):
+img = cv2.imread("qrcode.png")
+det= cv2.QRCodeDetector()
+val, pts, st_code=det.detectAndDecode(img)
+print(val)
 
-    def build(self):
-        return Builder.load_string(
-        """
-        #:import ZBarCam kivy_garden.zbarcam.ZBarCam
-        BoxLayout:
-            orientation: 'vertical'
-            ZBarCam:
-                id: qrcodecam
-            Label:
-                size_hint: None, None
-                size: self.texture_size[8], 50
-                text: ' '.join([str(symbol.data) for symbol in qrcodecam.symbols])
-        """
-
-        )
-
-if __name__ == '__main__':
-    QrCodeApp().run()
+webbrowser.open(val)
