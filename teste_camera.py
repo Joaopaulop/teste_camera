@@ -12,7 +12,8 @@ if webcam.isOpened():
       cv2.imshow("Imagem da Webcam", frame)
       key = cv2.waitKey(2)
       if cv2.waitKey(33) == ord('a'):
-         cv2.imwrite("Foto.png",frame)
+         #linha abaixo comentada para n ficar gravando novas imagens e reutilizar a imagem previamente capturada 
+         #cv2.imwrite("Foto.png",frame)
          filename = cv2.imread("Foto.png")
          qrapp2.lerQR(filename)
          break
