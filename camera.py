@@ -3,6 +3,10 @@ from pyzbar.pyzbar import decode
 from PIL import Image 
 from qrapp2 import decode
 
+"""
+Para realizar a identificacao do qrcode ou texto o usuario deve tirar uma foto e selecionar se quer buscar o texto da imagem ou texto
+"""
+
 webcam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 if webcam.isOpened():
