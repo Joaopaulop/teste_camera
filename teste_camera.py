@@ -1,6 +1,6 @@
-import cv2
-from pyzbar.pyzbar import decode
-from PIL import Image 
+import cv2 # pip install opencv-python
+from pyzbar.pyzbar import decode # pip install pyzbar
+from PIL import Image # pip install Pillow
 import qrapp2 
 
 webcam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
