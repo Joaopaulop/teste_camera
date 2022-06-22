@@ -14,7 +14,7 @@ if code!=0:
 '''
 
 import qrcode
-img = qrcode.make('https://www.youtube.com/watch?v=3yiT_WMlosg')
+img = qrcode.make("""receber objeto passado pelo responsável""")
 type(img)  # qrcode.image.pil.PilImage
 img.save("qrcode.png")
 
