@@ -1,6 +1,4 @@
-from anyio import open_process
 from kivy.uix.screenmanager import Screen
-
 from kivymd.app import MDApp
 from kivymd.uix.button import MDRectangleFlatButton
 
